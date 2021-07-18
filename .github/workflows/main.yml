@@ -41,15 +41,17 @@ jobs:
       # Change directory, build and run programs
       - name: AddTwo
         run: |
-          cd 1/HW && ls -la
-          sudo javac AddTwo.java
-          sudo java AddTwo
+          cd 1/HW
+          ls -la
+      - run: sudo javac AddTwo.java
+      - run: sudo java AddTwo
           
       - name: Ex
         run: |
+          cd 1/HW
           ls -la
-          sudo javac Ex.java
-          sudo java Ex
+      - run: sudo javac Ex.java
+      - run: sudo java Ex
         
       - name: IfEx
         run: |
