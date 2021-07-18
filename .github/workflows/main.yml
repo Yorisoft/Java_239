@@ -32,30 +32,30 @@ jobs:
     
       # Check directory
       - name: Directory
-      - run: ls -la $GITHUB_WORKSPACE
+        run: ls -la $GITHUB_WORKSPACE
       
       # Change permissions
       - name: Permissions
-      - run: chmod -R +x $GITHUB_WORKSPACE
+        run: chmod -R +x $GITHUB_WORKSPACE
         
       # Change directory, build and run programs
       - name: AddTwo
-      - run: cd 1/HW && ls -la
-      - run: sudo javac AddTwo.java
-      - run: sudo java AddTwo
+        run: cd 1/HW && ls -la
+        run: sudo javac AddTwo.java
+        run: sudo java AddTwo
           
       - name: Ex
-      - run: ls -la
-      - run: sudo javac Ex.java
-      - run: sudo java Ex
+        run: ls -la
+        run: sudo javac Ex.java
+        run: sudo java Ex
         
       - name: IfEx
-      - run: sudo javac IfEx.java
-      - run: sudo java IfEx  
+        run: sudo javac IfEx.java
+        run: sudo java IfEx  
         
        # Change directory, build and run programs
       - name: Largest Div
-        run: |
+      - run: |
           cd $GITHUB_WORKSPACE/2/HW
           sudo javac LargestDiv.java
           sudo java LargestDiv
