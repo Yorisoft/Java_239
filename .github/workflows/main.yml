@@ -58,7 +58,7 @@ jobs:
         
        # Change directory, build and run programs
       - name: Largest Div
-      - run: |
+        run: |
           cd $GITHUB_WORKSPACE/2/HW
           sudo javac LargestDiv.java
           sudo java LargestDiv
