@@ -1,0 +1,28 @@
+Student Information:
+ Name: 			Yelsin Sepulveda
+ Address: 		27 Melcher St, Boston, MA 02210
+ ID: 			9888070
+ Expected Y.O.G: 	2022
+ Semester Tuition: 	$859.57
+
+Student Information:
+ Name: 			Nahobi Perez
+ Address: 		343 Congress St, Boston, MA 02210
+ ID: 			9888171
+ Expected Y.O.G: 	2021
+ Semester Tuition: 	$1,058.32
+
+Student Information:
+ Name: 			Alba Bernable
+ Address: 		3500 Deer Creek Road Palo Alto, CA 94304
+ ID: 			254489
+ Expected Y.O.G: 	2024
+ Semester Tuition: 	$453.20
+
+Student Information:
+ Name: 			Carmen Bernable
+ Address: 		100 N Riverside Plaza, Chicago, IL 60606
+ ID: 			1365898
+ Expected Y.O.G: 	2024
+ Semester Tuition: 	$460.20
+
