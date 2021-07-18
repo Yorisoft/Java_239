@@ -43,15 +43,15 @@ jobs:
         run: |
           cd 1/HW
           ls -la
-      - run: sudo javac AddTwo.java
-      - run: sudo java AddTwo
+          sudo javac AddTwo.java
+          sudo java AddTwo
           
       - name: Ex
         run: |
           cd 1/HW
           ls -la
-      - run: sudo javac Ex.java
-      - run: sudo java Ex
+          sudo javac Ex.java
+          sudo java Ex
         
       - name: IfEx
         run: |
