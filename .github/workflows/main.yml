@@ -42,19 +42,18 @@ jobs:
       - name: AddTwo
         run: |
           cd 1/HW
-          ls -la
           sudo javac AddTwo.java
           sudo java AddTwo
           
       - name: Ex
         run: |
           cd 1/HW
-          ls -la
           sudo javac Ex.java
           sudo java Ex
         
       - name: IfEx
         run: |
+          cd 1/HW
           sudo javac IfEx.java
           sudo java IfEx  
         
@@ -67,26 +66,33 @@ jobs:
           
       - name: Loops
         run: |
+          cd $GITHUB_WORKSPACE/2/HW
           sudo javac Loops.java
           sudo java Loops
                  
       # Runs the Encrypt program
       - name: Encrypt
         run: |
-          cd Encrypt_Decrypt
+          cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
           sudo java Encrypt.java < sampleText r.r
         
       # Print Encrypt Results
       - name: Encrypt Results
-        run: cat r.r
+        run: |
+          cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
+          cat r.r
 
       # Print Decrypt program
       - name: Decrypt
-        run: sudo java Decrypt.java < r.r decrypt.txt
+        run: |
+          cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
+          sudo java Decrypt.java < r.r decrypt.txt
         
       # Print Decrypt Results
       - name: Decrypt Results
-        run: cat decrypt.txt
+        run: |
+          cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
+          cat decrypt.txt
         
       # Change directory, build and run programs
       - name: Emp_Ex
