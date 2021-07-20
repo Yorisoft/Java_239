@@ -120,15 +120,15 @@ jobs:
           sudo java Customer_Ex
 
       # Change directory, build and run programs
-      - name: StudentA
-        run: |
-          cd $GITHUB_WORKSPACE/3.1/HW/
-          sudo javac StudentA.java
-          sudo java StudentA
+      # - name: StudentA
+      #   run: |
+      #     cd $GITHUB_WORKSPACE/3.1/HW/
+      #     sudo javac StudentA.java
+      #     sudo java StudentA
 
-      - name: StudentA
-        run: |
-          cd $GITHUB_WORKSPACE/3.1/HW/
-          sudo javac StudentB.java
-          sudo java StudentB < r.r > StudentB_Output.txt
+      # - name: StudentA
+      #   run: |
+      #     cd $GITHUB_WORKSPACE/3.1/HW/
+      #     sudo javac StudentB.java
+      #     sudo java StudentB < r.r > StudentB_Output.txt
 

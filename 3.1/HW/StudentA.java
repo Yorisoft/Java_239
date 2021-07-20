@@ -1,9 +1,6 @@
 import java.io.*;
 import java.text.*;
 import javax.swing.JOptionPane;
-import java.util.concurrent.TimeUnit;
-import java.awt.event.KeyEvent;
-import java.awt.*;
 
 // Student class
 class StudentRec {
@@ -40,9 +37,8 @@ class StudentRec {
 }
 
 class StudentA{
-    public static void main(String args[]) throws IOException, InterruptedException, AWTException{
+    public static void main(String args[]) throws IOException{
         BufferedReader dataReader = new BufferedReader(new FileReader("Student.dat"));
-        Robot rob = new Robot();
 
         String str_name;
         String str_address;
