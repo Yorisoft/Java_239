@@ -38,7 +38,7 @@ jobs:
       - name: Permissions
         run: chmod -R +x $GITHUB_WORKSPACE
         
-      # Change directory, build and run programs
+      # Change directory, build and run programs for HW 1
       - name: HW_1:AddTwo
         run: |
           cd 1/HW
@@ -57,7 +57,7 @@ jobs:
           sudo javac IfEx.java
           sudo java IfEx  
         
-       # Change directory, build and run programs
+       # Change directory, build and run programs for HW 2
       - name: HW_2:Largest Div
         run: |
           cd $GITHUB_WORKSPACE/2/HW
@@ -94,7 +94,7 @@ jobs:
           cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
           cat decrypt.txt
         
-      # Change directory, build and run programs
+      # Change directory, build and run programs for HW 3
       - name: HW_3:Emp_Ex
         run: |
           cd $GITHUB_WORKSPACE/3.0/HW/Emp_Ex
@@ -119,19 +119,20 @@ jobs:
           sudo javac Customer_Ex.java
           sudo java Customer_Ex
 
-      # Change directory, build and run programs
-      # - name: HW_4:StudentA
-      #   run: |
-      #     cd $GITHUB_WORKSPACE/3.1/HW/
-      #     sudo javac StudentA.java
-      #     sudo java StudentA
+      # Change directory, build and run programs for HW 4
+      - name: HW_4:StudentA
+        run: |
+          cd $GITHUB_WORKSPACE/3.1/HW/
+          sudo javac StudentA.java
+          sudo java StudentA
 
-      # - name: HW_4:StudentA
-      #   run: |
-      #     cd $GITHUB_WORKSPACE/3.1/HW/
-      #     sudo javac StudentB.java
-      #     sudo java StudentB < r.r > StudentB_Output.txt
+      - name: HW_4:StudentA
+        run: |
+          cd $GITHUB_WORKSPACE/3.1/HW/
+          sudo javac StudentB.java
+          sudo java StudentB < r.r > StudentB_Output.txt
 
+      # Change directory, build and run programs for HW 5
       - name: HW_5:ParseEmpSol
         run: |
           cd $GITHUB_WORKSPACE/5.0/HW/

@@ -137,10 +137,10 @@ public static void main(String args[]) throws IOException {
 		System.out.printf(" Students gpa is: %.2f \n", student.calc_gpa(student.credits, student.points)); 
    	
 		// TODO:Comment out until cicd pipline has desktop gui display 
-		JOptionPane.showMessageDialog(null,
+		/*JOptionPane.showMessageDialog(null,
             student.toString(),
             "Student Record",
-            JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.PLAIN_MESSAGE); */
 	}//for
 }//main
 }//ParseEmpSol

@@ -67,10 +67,10 @@ class StudentB{
 
             System.out.println(student);
 
-            JOptionPane.showMessageDialog(null,
+            /* JOptionPane.showMessageDialog(null,
             student.toString(),
              "Student Record",
-             JOptionPane.PLAIN_MESSAGE);
+             JOptionPane.PLAIN_MESSAGE); */
         }
     }
 }
