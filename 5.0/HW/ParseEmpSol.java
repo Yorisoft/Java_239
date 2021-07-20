@@ -25,9 +25,18 @@
 
 import java.io.*;
 import java.text.*;
+import javax.swing.JOptionPane;
 
 
-class Emprec {
+interface College_Iface {
+
+	double calc_gpa(int creds, double points);
+
+	String calc_level();
+
+}
+
+class Emprec implements College_Iface{
   String name;
   char sex;
   int credits;
@@ -48,7 +57,7 @@ Emprec (String name, String sex, String credits, String points, String active)  
 	} catch(NumberFormatException errmsg){
 		System.out.println("Invalpoints format"+ errmsg);
      
-		this.name  = "";  
+		this.name  = "undefined";  
 		this.sex  = ' ';
 		this.credits  = 0; 
 		this.points  = 0.0; 
@@ -56,11 +65,21 @@ Emprec (String name, String sex, String credits, String points, String active)  
 	}//catch
 }//Emprec constructor !!!!
 
-double calc_gpa(int creds, double points){
+public double calc_gpa(int creds, double points){
 	double gpa = 0.0;
 
 	if(creds != 0) gpa = points / creds;
 	return gpa;
+}
+
+public String calc_level(){
+	String level = "";
+
+	if (this.credits < 45) level = "Freshman";
+	else if (this.credits < 90) level = "Sophmore";
+	else if (this.credits < 135) level = "Junior";
+	else level = "Senior";
+	return level;
 }
 
 // Step 4 ASSIGN IT TO THE toString() 
@@ -80,8 +99,6 @@ public  String toString(){
 //methods !!!!
 // constructors !!!
 }// Emprec
-
-
 
 class ParseEmpSol {
   
@@ -108,19 +125,25 @@ public static void main(String args[]) throws IOException {
 		str_points = inData.readLine();
 		str_active = inData.readLine();
 
-		Emprec employee = new Emprec(str_name, str_sex, str_credits, str_points, str_active);  
-	
-		
+		Emprec student = new Emprec(str_name, str_sex, str_credits, str_points, str_active);  
 	
 		//Step 7 pass the new field to the constructor !!!  V.O.
-		System.out.println(employee);
+		System.out.println(student);
+
+		// Print out Level
+		System.out.println(" Students college level is:" + student.calc_level());  
+
 		// Print out GPA
-		System.out.printf(" Students gpa is: %.2f \n", employee.calc_gpa(employee.credits, employee.points));   
-   	}//for
+		System.out.printf(" Students gpa is: %.2f \n", student.calc_gpa(student.credits, student.points)); 
+   	
+		// TODO:Comment out until cicd pipline has desktop gui display 
+		JOptionPane.showMessageDialog(null,
+            student.toString(),
+            "Student Record",
+            JOptionPane.PLAIN_MESSAGE);
+	}//for
 }//main
 }//ParseEmpSol
-
-
 
 // you may try this method     System.exit(0);
 // to exit from the program.

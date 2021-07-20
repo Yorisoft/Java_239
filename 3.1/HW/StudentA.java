@@ -60,7 +60,7 @@ class StudentA{
             System.out.println(student);
 
             JOptionPane.showMessageDialog(null,
-                "student.toString()",
+                student.toString(),
                 "Student Record",
                 JOptionPane.PLAIN_MESSAGE);
         }
