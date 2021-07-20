@@ -94,43 +94,56 @@ jobs:
           cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
           cat decrypt.txt
         
-      # Change directory, build and run programs for HW 3
-      - name: HW_3:Emp_Ex
+      # Change directory, build and run programs for HW 3.0
+      - name: HW_3.0:Emp_Ex
         run: |
           cd $GITHUB_WORKSPACE/3.0/HW/Emp_Ex
           sudo javac Emp_Ex.java
           sudo java Emp_Ex
           
-      - name: HW_3:Emp_Ex4
+      - name: HW_3.0:Emp_Ex4
         run: |
           cd $GITHUB_WORKSPACE/3.0/HW/Emp_Ex4
           sudo javac Emp_Ex4.java
           sudo java Emp_Ex4
           
-      - name: HW_3:Emp_Ex12
+      - name: HW_3.0:Emp_Ex12
         run: |
           cd $GITHUB_WORKSPACE/3.0/HW/Emp_Ex12
           sudo javac Emp_Ex12.java
           sudo java Emp_Ex12
           
-      - name: HW_3:Extra_Credit
+      - name: HW_3.0:Extra_Credit
         run: |
           cd $GITHUB_WORKSPACE/3.0/HW/Extra_Credit
           sudo javac Customer_Ex.java
           sudo java Customer_Ex
 
-      # Change directory, build and run programs for HW 4
-      - name: HW_4:StudentA
+      # Change directory, build and run programs for HW 3.1
+      - name: HW_3.1:StudentA
         run: |
           cd $GITHUB_WORKSPACE/3.1/HW/
           sudo javac StudentA.java
           sudo java StudentA
 
-      - name: HW_4:StudentA
+      - name: HW_3.1:StudentA
         run: |
           cd $GITHUB_WORKSPACE/3.1/HW/
           sudo javac StudentB.java
           sudo java StudentB < r.r > StudentB_Output.txt
+
+      - name: HW_3.1:StudentA_Output
+        run: |
+          cd $GITHUB_WORKSPACE/3.1/HW/
+          sudo javac StudentB.java
+          sudo java StudentB < r.r > StudentB_Output.txt
+
+      # Change directory, build and run programs for HW 4.0
+      - name: HW_4.0:Inherit13
+        run: |
+          cd $GITHUB_WORKSPACE/4.0/HW/
+          sudo javac Inherit13.java
+          sudo java Inherit13
 
       # Change directory, build and run programs for HW 5
       - name: HW_5:ParseEmpSol
