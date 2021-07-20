@@ -135,6 +135,6 @@ jobs:
       - name: HW_5:ParseEmpSol
         run: |
           cd $GITHUB_WORKSPACE/5.0/HW/
-          sudo javac ParseEmpSolHW2.java
-          sudo java ParseEmpSolHW2 < sampleInfo.dat
+          sudo javac ParseEmpSol.java
+          sudo java ParseEmpSol < sampleInfo.dat
 
