@@ -39,96 +39,102 @@ jobs:
         run: chmod -R +x $GITHUB_WORKSPACE
         
       # Change directory, build and run programs
-      - name: AddTwo
+      - name: HW_1:AddTwo
         run: |
           cd 1/HW
           sudo javac AddTwo.java
           sudo java AddTwo
           
-      - name: Ex
+      - name: HW_1:Ex
         run: |
           cd 1/HW
           sudo javac Ex.java
           sudo java Ex
         
-      - name: IfEx
+      - name: HW_1:IfEx
         run: |
           cd 1/HW
           sudo javac IfEx.java
           sudo java IfEx  
         
        # Change directory, build and run programs
-      - name: Largest Div
+      - name: HW_2:Largest Div
         run: |
           cd $GITHUB_WORKSPACE/2/HW
           sudo javac LargestDiv.java
           sudo java LargestDiv
           
-      - name: Loops
+      - name: HW_2:Loops
         run: |
           cd $GITHUB_WORKSPACE/2/HW
           sudo javac Loops.java
           sudo java Loops
                  
       # Runs the Encrypt program
-      - name: Encrypt
+      - name: HW_2:Encrypt
         run: |
           cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
           sudo java Encrypt.java < sampleText r.r
         
       # Print Encrypt Results
-      - name: Encrypt Results
+      - name: HW_2:Encrypt Results
         run: |
           cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
           cat r.r
 
       # Print Decrypt program
-      - name: Decrypt
+      - name: HW_2:Decrypt
         run: |
           cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
           sudo java Decrypt.java < r.r decrypt.txt
         
       # Print Decrypt Results
-      - name: Decrypt Results
+      - name: HW_2:Decrypt Results
         run: |
           cd $GITHUB_WORKSPACE/2/HW/Encrypt_Decrypt
           cat decrypt.txt
         
       # Change directory, build and run programs
-      - name: Emp_Ex
+      - name: HW_3:Emp_Ex
         run: |
           cd $GITHUB_WORKSPACE/3.0/HW/Emp_Ex
           sudo javac Emp_Ex.java
           sudo java Emp_Ex
           
-      - name: Emp_Ex4
+      - name: HW_3:Emp_Ex4
         run: |
           cd $GITHUB_WORKSPACE/3.0/HW/Emp_Ex4
           sudo javac Emp_Ex4.java
           sudo java Emp_Ex4
           
-      - name: Emp_Ex12
+      - name: HW_3:Emp_Ex12
         run: |
           cd $GITHUB_WORKSPACE/3.0/HW/Emp_Ex12
           sudo javac Emp_Ex12.java
           sudo java Emp_Ex12
           
-      - name: Extra_Credit
+      - name: HW_3:Extra_Credit
         run: |
           cd $GITHUB_WORKSPACE/3.0/HW/Extra_Credit
           sudo javac Customer_Ex.java
           sudo java Customer_Ex
 
       # Change directory, build and run programs
-      # - name: StudentA
+      # - name: HW_4:StudentA
       #   run: |
       #     cd $GITHUB_WORKSPACE/3.1/HW/
       #     sudo javac StudentA.java
       #     sudo java StudentA
 
-      # - name: StudentA
+      # - name: HW_4:StudentA
       #   run: |
       #     cd $GITHUB_WORKSPACE/3.1/HW/
       #     sudo javac StudentB.java
       #     sudo java StudentB < r.r > StudentB_Output.txt
+
+      - name: HW_5:ParseEmpSol
+        run: |
+          cd $GITHUB_WORKSPACE/5.0/HW/
+          sudo javac ParseEmpSolHW2.java
+          sudo java ParseEmpSolHW2
 
