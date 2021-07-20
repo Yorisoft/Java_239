@@ -136,5 +136,5 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/5.0/HW/
           sudo javac ParseEmpSolHW2.java
-          sudo java ParseEmpSolHW2
+          sudo java ParseEmpSolHW2 < sampleInfo.dat
 
